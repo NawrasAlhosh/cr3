@@ -1,0 +1,8 @@
+<h2>{{ menu?.name }}</h2>
+<div *ngIf="menu">
+  <img [src]="menu.photo" width="250px" alt="{{ menu.name }}" />
+  <p>{{ menu.description }}</p>
+  <p>Price: {{ menu.price }}</p>
+</div>
+
+<button class="btn btn-primary" (click)="addToCart()">Add to Cart</button>

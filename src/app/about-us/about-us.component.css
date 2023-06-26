@@ -1,0 +1,37 @@
+.about-us {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.about-us h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.about-us h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.about-us img {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.about-us hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}

@@ -1,0 +1,14 @@
+<div *ngFor="let item of cartItems">
+  <h5>{{ item.name }}</h5>
+  <p>{{ item.description }}</p>
+  <p>Price: {{ item.price }}</p>
+</div>
+<div>
+  <h2>Your Order</h2>
+  <ul>
+    <li *ngFor="let item of cartItems">
+      {{ item.name }} - {{ item.price }} - {{ item.description }}
+    </li>
+  </ul>
+  <button class="btn btn-primary" (click)="clearCart()">Place Order</button>
+</div>

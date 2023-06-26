@@ -1,0 +1,30 @@
+<div>
+  <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1">
+    <div *ngFor="let menu of menu; index as i" class="col mb-4">
+      <div class="card h-100">
+        <img src="{{ menu.photo }}" class="card-img-top menu-img" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ menu.name }}</h5>
+          <p class="card-text">{{ menu.description }}</p>
+          <hr />
+          <p class="card-text">Price: {{ "€" + menu.price }}</p>
+          <hr />
+          <p class="card-text">
+            Availability: {{ menu.available ? "😃" : "😞" }}
+          </p>
+          <ng-container *ngIf="menu.available">
+            <a [routerLink]="['/details', i]" class="btn btn-primary"
+              >Details</a
+            >
+            <button class="btn btn-success" (click)="addToCart(menu)">
+              Order
+            </button>
+          </ng-container>
+          <ng-container *ngIf="!menu.available">
+            <p class="card-text">Not available</p>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
